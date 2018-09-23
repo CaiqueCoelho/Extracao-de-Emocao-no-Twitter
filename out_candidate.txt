@@ -1,0 +1,91 @@
+Positive tweets percentage: 28.26086956521739 %
+Negative tweets percentage: 17.391304347826086 %
+Neutral tweets percentage: 54.34782608695652 %
+{'RT': 22, 'O': 3, 'pt': 4, 'este': 2, 'vídeo': 2, 'alinhado': 2, 'c': 2, 'maduro': 4, 'Bolsonaro': 16, 'contra': 3, 'Quer': 1, 'dizer': 1, 'que': 18, 'o': 14, 'agressor': 1, 'de': 14, 'BOLSONARO': 2, 'Levou': 1, 'um': 5, 'notebook': 1, 'não': 4, 'usava': 1, 'h': 1, 'mais': 5, 'ano': 1, 'Dois': 1, 'celulares': 1, 'não…': 2, 'Sou': 1, 'gay': 2, 'e': 8, 'sou': 2, 'Bolsonaro,não': 1, 'quero': 2, 'privilégios': 1, 'Brasil': 2, 'melhor..': 1, 'E': 1, 'olha': 1, 'a': 11, 'intolerância': 1, 'd': 1, 'rita': 1, 'lee': 1, 'meu': 1, 'bolsominion': 1, 'secreto': 1, 'dela': 1, 'próprio': 1, 'bolsonaro': 1, '28%': 1, 'Haddad': 4, '16%': 1, 'Ciro': 4, '13%': 1, 'Alckmin': 1, '9%': 1, 'Marina': 2, '7%': 2, 'Colado': 1, 'em': 6, 'CIRO': 2, 'vence': 2, 'Bonoro': 1, 'tranquilo': 1, 'no': 7, '2ºT': 1, 'diferente': 1, 'do': 5, 'pe…': 1, 'Para': 2, 'Jornal': 1, 'Nacional': 1, 'da': 5, 'Globo': 1, 'at': 1, 'canudinho': 1, 'plástico': 1, 'importante': 1, 'descoberta': 1, 'registros': 1, 'terror…': 1, 'Absurdo': 1, 'tão': 1, 'fazendo': 1, 'com': 4, 'Anitta': 1, 'estão': 1, 'linchando': 1, 'menina': 1, 'SEMPRE': 1, 'deu': 1, 'muita': 1, 'visibilidade': 1, 'causa': 1, 'LGBT': 1, 'porque': 1, 'ela': 1, 's…': 1, '_poder': 1, 'Candidato': 1, 'ao': 1, 'Senado': 1, 'Rio': 1, 'filho': 1, 'cresce': 1, 'pai': 1, 'após': 1, 'atentado': 1, 'Marco': 1, 'Aurélio': 1, 'rebate': 1, 'diz': 2, 'v': 1, "'bons": 1, 'olhos': 1, 'quem': 2, 'questiona': 1, 'segurança': 1, 'urnas': 1, '“Gente': 1, 'eu': 1, 'nunca': 1, 'fui': 1, 'casada': 1, 'me': 2, 'batia': 1, 'era': 2, 'Gomes': 1, 'Ass': 1, 'Patrícia': 1, 'Pillar.': 1, 'melhor': 2, 'Jair': 2, 'se': 5, 'Ac…': 1, 'deixe': 1, 'pra': 2, 'votar': 2, 'somente': 1, 'segundo': 2, 'Bora': 1, 'ganhar': 2, 'j': 1, 'primeiro!!': 1, 'Datafolha': 1, 'único': 1, '2': 2, 'turno': 4, 'Assim': 1, 'funciona': 1, 'militância': 1, 'esquerda': 2, 'rapaz': 1, 'resolveu': 1, 'apoiar': 2, 'adivinha': 1, 't': 1, 'sendo': 1, 'perseguido': 1, 'amea…': 1, '_se': 1, 'Iza': 1, 'foi': 1, 'convidada': 1, 'para': 2, 'nova': 1, 'campanha': 1, 'Riachuelo': 1, 'mas': 1, 'recusou': 1, 'convite': 1, 'devido': 1, 'empresa': 1, 'candidato': 1, 'presidênci…': 1, 'Fantástica': 1, 'declaração': 1, 'presidente': 1, 'Gaviões': 1, 'Fiel': 1, '"Gavião': 1, 'vota': 1, 'Bolsonaro!': 1, 'Como': 1, 'corinthiana': 1, 'orgulh…': 1, 'Acho': 2, 'mostrar': 1, 'padres': 1, 'apoiam': 1, 'Temos': 1, 'exemplo': 1, 'isso.': 1, 'Andrew': 1, 'Downie': 1, 'autor': 1, 'biografia': 1, 'sobre': 1, 'Sócrates': 1, 'jogadores': 1, 'hoje': 1, 'dia': 1, 'ganham': 1, 'muito': 2, 'importam': 1, 'muito…': 1, 'Segundo': 1, 'Ibope': 1, 'tem': 3, '59': 1, 'dos': 1, 'votos': 2, 'válidos': 1, 'Roraima': 1, 'estado': 1, 'afetado': 1, 'pela': 1, 'situação': 1, 'calamitosa': 1, 'implementada…': 1, 'sempre': 1, 'discurso': 1, 'coerente': 1, 'as': 1, 'mulheres': 1, 'irão': 1, 'nele': 1, 'além': 1, 'serem': 1, 'inteligentes': 1, 'são': 1, 'pessoas': 1, 'r…': 1, 'IBOPE': 1, 'RORAIMA:': 1, '52%': 1, '9%;': 1, '8%;': 1, 'PS': 1, 'Aqui': 1, 'nota-se': 1, 'claramente': 1, 'resposta': 1, 'população': 1, 'cris…': 1, 'Hoje': 1, 'tivesse': 1, 'morrido': 1, 'estariam': 1, 'A': 2, 'tudo': 1, 'menos': 1, 'burra': 1, 'plano': 1, 'perfeit…': 1, 'Raul': 1, 'Jungmann': 1, 'informou': 1, 'perícia': 1, 'concluiu': 1, 'laptop': 1, 'Adélio': 1, 'Bispo': 1, 'Oliveira': 1, 'esfaqueador': 1, '_presidente': 1, '"engraçado"': 1, 'pessoa': 1, 'for': 1, 'eleito': 1, 'vai': 2, 'sair': 1, 'morar': 1, 'nos': 1, 'EUA': 1, 'ou': 1, 'algum': 1, 'país': 1, '1º…': 1, '_BR': 1, '#MulheresComBolsonaro': 1, 'Joyce': 1, 'mostra': 1, 'como': 1, 'desmonta': 1, 'os': 1, 'principais': 1, 'argumentos': 1, 'J': 1, 'vejo': 1, 'direita': 1, 'conformando': 1, 'suficientes': 1, 'primeiro': 1}
+
+
+Positive tweets:
+RT @shiynzato: O pt é este vídeo, pt alinhado c maduro. Bolsonaro é contra maduro. https://t.co/YGG24fKJSQ
+RT @henriolliveira: Quer dizer que o agressor de BOLSONARO
+
+- Levou um notebook que não usava há mais de um ano? 
+
+- Dois celulares que não…
+@PastorMalafaia Sou gay e sou Bolsonaro,não quero privilégios quero um Brasil melhor... E olha que a intolerância d… https://t.co/IavBYjkHYD
+RT @therosecolored: e a rita lee que o meu bolsominion secreto dela é o próprio bolsonaro
+RT @petcafer: Bolsonaro 28%
+Haddad 16%
+Ciro 13%
+Alckmin 9%
+Marina 7%
+
+Colado em Haddad, CIRO vence Bonoro tranquilo no 2ºT, diferente do pe…
+RT @leandroruschel: Para o Jornal Nacional da Globo, até canudinho de plástico é mais importante do que a descoberta de registros do terror…
+RT @pauloap: Absurdo o que tão fazendo com a Anitta
+
+estão linchando a menina, que SEMPRE deu muita visibilidade à causa LGBT, porque ela s…
+RT @folha_poder: Candidato ao Senado no Rio, filho de Bolsonaro cresce mais que o pai após atentado https://t.co/VFYjWss1Ra
+RT @OGloboPolitica: Marco Aurélio rebate @jairbolsonaro e diz que não vê com 'bons olhos' quem questiona segurança de urnas https://t.co/1x…
+RT @WellingtonFave3: “Gente eu nunca fui casada com o Bolsonaro, quem me batia era o Ciro Gomes” Ass: Patrícia Pillar.
+
+É melhor Jair se Ac…
+@CanalDoOtario @CanalDoOtario  não deixe pra votar em Bolsonaro somente no segundo. Bora ganhar já no primeiro!!
+RT @portalMSN: Datafolha: Ciro é único que vence Bolsonaro no 2º turno https://t.co/A05yilnsNv
+RT @pauloap: Assim funciona a militância de esquerda
+
+um rapaz que é gay resolveu apoiar o Bolsonaro e adivinha? tá sendo perseguido e amea…
+RT @MarceloJo_se: Iza foi convidada para nova campanha da Riachuelo, mas recusou o convite devido a empresa apoiar o candidato a presidênci…
+RT @LisetePSOL: Fantástica declaração do presidente da Gaviões da Fiel: "Gavião não vota em Bolsonaro!" Como corinthiana que sou, me orgulh…
+RT @brsouzarose: @Francischini_ Acho melhor mostrar padres que apoiam Bolsonaro. Temos exemplo pra isso.
+RT @pontejornalismo: Para Andrew Downie, autor de biografia sobre Sócrates, jogadores de hoje em dia ganham muito mais e se importam muito…
+RT @filgmartin: Segundo o Ibope, Bolsonaro tem 59% dos votos válidos em Roraima, estado mais afetado pela situação calamitosa implementada…
+RT @MarceloConBR: Bolsonaro sempre tem um discurso coerente, as mulheres que irão votar nele além de serem muito inteligentes são pessoas r…
+RT @MouraoVice: IBOPE RORAIMA:
+ 
+BOLSONARO 52%; 
+CIRO 9%;
+Haddad 8%;
+Marina 7%
+
+PS: Aqui, nota-se claramente a resposta da população à cris…
+RT @conservadores: Hoje se Bolsonaro tivesse morrido Haddad e Ciro estariam no 2 turno. A esquerda é tudo, menos burra. O plano era perfeit…
+O pt é este vídeo, pt alinhado c maduro. Bolsonaro é contra maduro. https://t.co/YGG24fKJSQ
+RT @SaraLaurian: Raul Jungmann informou que a perícia concluiu que o laptop de Adélio Bispo de Oliveira, esfaqueador de Jair Bolsonaro, não…
+RT @17_presidente: Acho "engraçado". A pessoa diz que se Bolsonaro for eleito vai sair do Brasil e vai morar nos EUA ou em algum país de 1º…
+RT @SimoneRJ_BR: #MulheresComBolsonaro Joyce mostra como desmonta os principais argumentos contra Bolsonaro: https://t.co/GOCaHyzA8Q
+Já vejo a direita se conformando com o segundo turno. Bolsonaro tem votos suficientes para ganhar no primeiro turno… https://t.co/HxX0HP3Kd0
+
+
+Negative tweets:
+RT @pauloap: ÁLVARO DIAS CHAMA JAIR BOLSONARO DE "BANDIDO", "VAGABUNDO" E FALA QUE ELE TÁ "QUASE MORTO"
+
+mas nao é o Bolsonaro que foi dela…
+RT @LuisFernOli: Meu voto e minha batalha são para Geraldo Alckmin até o fim! Depois, num eventual segundo turno entre Bolsonaro e Haddad o…
+RT @revistaforum: Instituto Brasileiro de Peritos diz que áudio de Bolsonaro em hospital deve ser falso https://t.co/DOu3ievi1j https://t.c…
+RT @CarlosBolsonaro: A mais nova fakenews com um áudio em que dizem ser Bolsonaro reclamando no hospital. O negócio é mais mal feito do que…
+RT @carolmoreira3: falar NÃO pro bolsonaro não é nem falar de política, é falar de bom senso mesmo. beijas ✨ #elenão
+RT @haveheartx: personagens fictícios que votariam no bolsonaro:
+johnny bravo
+dick vigarista
+sr sirigueijo
+tony stark
+kuwabara
+eustácio do…
+"O PT já está no segundo turno; não penso isso do Bolsonaro", diz Alckmin https://t.co/xxHJrkmX6a via @UOLPolitica @UOL
+RT @estellafairenf: Eu fico com tanta pena de mina que apoia bolsonaro pq ou é BURRA ou gosta de ouvir merda né
+RT @CarlosMBlanc: @oicarofonseca @yellowlucia São perigosos, ditadores. Se tiverem oportunidade, atiram mesmo. Salivam ódio. Isto já foi lo…
+RT @pauloap: Muita gente mente sobre o Bolsonaro, fala que ele odeia mulheres, etc
+
+Jogam sujo sem dó...o maior tesouro da vida do cara é e…
+RT @JefinhoMenes: Vai lá pobre. 
+Volta no Bolsonaro. 
+Faz seu imposto de renda saltar de 7,5% pra 20%, pro rico parar de pagar 27,5% e paga…
+RT @aguedescartoon: Amoedo anuncia que vai ficar neutro num possível segundo turno entre PT e Bolsonaro.
+
+Ou seja, merece a alcunha que lhe…
+@allantercalivre Pra fechar a Fnac da Paulista é pq o negócio não ta bom mesmo! O Brasil totalmente instável. Bolso… https://t.co/EdQKqTUPEF
+RT @CSobania: Pesquisa DataFolha derrubou a tese petista da subida sem explicação do preposto do preso pelo Ibope! Bolsonaro em ascendência…
+RT @srdeabo: CPMF É FAKE NEWS da Imprensa desesperada querendo queimar o Bolsonaro espalhem.
+RT @aguedescartoon: Vou além: ficar neutro entre Bolsonaro e Haddad é sinal de BURRICE CRÔNICA.
+
+Mesmo depois de 16 anos o sujeito ainda NÃ…

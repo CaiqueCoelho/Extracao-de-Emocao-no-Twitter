@@ -1,12 +1,21 @@
 import re
 import tweepy
+import csv
+import sys
 from tweepy import OAuthHandler
 from textblob import TextBlob
  
+
+tweetsPositives = []
+tweetsNegatives = []
+dictPositive = {}
+dictNegatives = {}
+
 class TwitterClient(object):
     '''
     Generic Twitter Class for sentiment analysis.
     '''
+
     def __init__(self):
         '''
         Class constructor or initialization method.
@@ -27,6 +36,40 @@ class TwitterClient(object):
             self.api = tweepy.API(self.auth)
         except:
             print("Error: Authentication Failed")
+
+    def getWordNegatives(self):
+
+        for tweet in tweetsNegatives:
+            words = tweet.split()
+
+            for word in words:
+                existe = False
+                if(word in dictNegatives):
+                    existe = True      
+
+                if(not existe):
+                    dictNegatives[word] = 1
+                if(existe):
+                    count = dictNegatives[word]
+                    count += 1
+                    dictNegatives[word] = count
+
+    def getWordPositives(self):
+
+        for tweet in tweetsPositives:
+            words = tweet.split()
+
+            for word in words:
+                existe = False
+                if(word in dictPositive):
+                    existe = True      
+
+                if(not existe):
+                    dictPositive[word] = 1
+                if(existe):
+                    count = dictPositive[word]
+                    count += 1
+                    dictPositive[word] = count
  
     def clean_tweet(self, tweet):
         '''
@@ -34,6 +77,7 @@ class TwitterClient(object):
         using simple regex statements.
         '''
         return ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t]) |(\w+:\/\/\S+)", " ", tweet).split())
+
  
     def get_tweet_sentiment(self, tweet):
         '''
@@ -41,16 +85,28 @@ class TwitterClient(object):
         using textblob's sentiment method
         '''
         # create TextBlob object of passed tweet text
-        analysis = TextBlob(self.clean_tweet(tweet))
+        traducao = TextBlob(self.clean_tweet(tweet))
+
+        origin = traducao
+
+        #print(traducao)
+
+        if traducao.detect_language() != 'en':
+            traducao = TextBlob(str(traducao.translate(to='en')))
+
+        #print("AAAA")
+
         # set sentiment
-        if analysis.sentiment.polarity > 0:
+        if traducao.sentiment.polarity > 0:
+            tweetsPositives.append(origin)
             return 'positive'
-        elif analysis.sentiment.polarity == 0:
+        elif traducao.sentiment.polarity == 0:
             return 'neutral'
         else:
+            tweetsNegatives.append(origin)
             return 'negative'
  
-    def get_tweets(self, query, count = 10):
+    def get_tweets(self, query, count):
         '''
         Main function to fetch tweets and parse them.
         '''
@@ -90,7 +146,7 @@ def main():
     # creating object of TwitterClient Class
     api = TwitterClient()
     # calling function to get tweets
-    tweets = api.get_tweets(query = 'Bolsonaro', count = 400000)
+    tweets = api.get_tweets(query = 'Bolsonaro', count = 10000)
  
     # picking positive tweets from tweets
     ptweets = [tweet for tweet in tweets if tweet['sentiment'] == 'positive']
@@ -103,6 +159,20 @@ def main():
     # percentage of neutral tweets
     print("Neutral tweets percentage: {} %".format(100*(len(tweets) - len(ntweets) - len(ptweets))/len(tweets)))
  
+    api.getWordPositives()
+    api.getWordNegatives()
+
+    print(dictPositive)
+
+    with open('positive_words_bolsonaro.csv', 'w') as f:  # Just use 'w' mode in 3.x
+        for key in dictPositive.keys():
+            f.write("%s,%s\n"%(key,dictPositive[key]))
+
+
+    with open('negative_words_bolsonaro.csv', 'w') as f:  # Just use 'w' mode in 3.x
+        for key in dictNegatives.keys():
+            f.write("%s,%s\n"%(key,dictNegatives[key]))
+
     # printing first 5 positive tweets
     print("\n\nPositive tweets:")
     for tweet in ptweets[:100]:
@@ -112,7 +182,12 @@ def main():
     print("\n\nNegative tweets:")
     for tweet in ntweets[:100]:
         print(tweet['text'])
+
+    f.close()
  
 if __name__ == "__main__":
+
+    sys.stdout=open("out_candidate.txt","w")
+
     # calling main function
     main()
