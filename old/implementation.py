@@ -74,6 +74,15 @@ class TwitterClient(object):
                     count += 1
                     dictPositive[word] = count
 
+    def remove_emoji(sel, text):
+        emoji_pattern = re.compile(
+            u'(\U0001F1F2\U0001F1F4)|'       # Macau flag
+            u'([\U0001F1E6-\U0001F1FF]{2})|' # flags
+            u'([\U0001F600-\U0001F64F])'     # emoticons
+            "+", flags=re.UNICODE)
+
+        return emoji_pattern.sub('', text)
+
     def give_emoji_free_text(self, text):
         allchars = [str for str in text]
         emoji_list = [c for c in allchars if c in emoji.UNICODE_EMOJI]
@@ -93,28 +102,26 @@ class TwitterClient(object):
         text = ' '.join(re.sub("(@[A-Za-z0-9]+)|([^0-9A-Za-z \t]) |(\w+:\/\/\S+)", " ", tweet).split())
 
         '''
+        flag = '\U0001F1F2\U0001F1F4'
+        emote = '\U0001F620'
+        text = text.format(flag, self.remove_emoji(flag))
+        text = text.format(emote, self.remove_emoji(emote))
+        
+
         emoji_pattern = re.compile("["
         u"\U0001F600-\U0001F64F"  # emoticons
         u"\U0001F300-\U0001F5FF"  # symbols & pictographs
         u"\U0001F680-\U0001F6FF"  # transport & map symbols
         u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
-        u"\U0001F1F2-\U0001F1F4"  # Macau flag
-        u"\U0001F1E6-\U0001F1FF"  # flags
-        u"\U0001F600-\U0001F64F"
         u"\U00002702-\U000027B0"
         u"\U000024C2-\U0001F251"
         u"\U0001f926-\U0001f937"
-        u"\U0001F1F2"
-        u"\U0001F1F4"
-        u"\U0001F620"
         u"\u200d"
         u"\u2640-\u2642"
         "]+", flags=re.UNICODE)
 
         text = emoji_pattern.sub(r'', text)
         '''
-        
-
         text = self.give_emoji_free_text(text)
         
 
