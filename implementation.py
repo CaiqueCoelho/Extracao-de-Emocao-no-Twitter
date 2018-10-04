@@ -7,6 +7,21 @@ from tweepy import OAuthHandler
 from textblob import TextBlob
 from mtranslate import translate
 
+stop_words = {"de","a","o","que","e","do","da", "das", "em","um","para","é","com","não","uma","os","no","se","na","por","mais","as","dos",
+"como","mas","foi","ao","ele","das","tem","à","seu","sua","ou","ser","quando","muito","há","nos","já","está","eu","também","só","pelo",
+"pela","até","isso","ela","entre","era","depois","sem","mesmo","aos","ter","seus","quem","nas","me","esse","eles","estão","você","tinha",
+"foram","essa","num","nem","suas","meu","às","minha","têm","numa","pelos","elas","havia","seja","qual","será","nós","tenho","lhe","deles",
+"essas","esses","pelas","este","fosse","dele","tu","te","vocês","vos","lhes","meus","minhas","teu","tua","teus","tuas","nosso","nossa",
+"nossos","nossas","dela","delas","esta","estes","estas","aquele","aquela","aqueles","aquelas","isto","aquilo","estou","está","estamos",
+"estão","estive","esteve","estivemos","estiveram","estava","estávamos","estavam","estivera","estivéramos","esteja","estejamos","estejam",
+"estivesse","estivéssemos","estivessem","estiver","estivermos","estiverem","hei","há","havemos","hão","houve","houvemos","houveram",
+"houvera","houvéramos","haja","hajamos","hajam","houvesse","houvéssemos","houvessem","houver","houvermos","houverem","houverei","houverá",
+"houveremos","houverão","houveria","houveríamos","houveriam","sou","somos","são","era","éramos","eram","fui","foi","fomos","foram","fora",
+"fôramos","seja","sejamos","sejam","fosse","fôssemos","fossem","for","formos","forem","serei","será","seremos","serão","seria","seríamos",
+"seriam","tenho","tem","temos","tém","tinha","tínhamos","tinham","tive","teve","tivemos","tiveram","tivera","tivéramos","tenha","tenhamos",
+"tenham","tivesse","tivéssemos","tivessem","tiver","tivermos","tiverem","terei","terá","teremos","terão","teria","teríamos","teriam", "vai",
+"vou", "tão", "alguma", "interesse", "ter", "caso", "abaixo", "animais", "ainda", "outras", "etc.", "em", "a", "b", "c", 
+"d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"}
  
 
 tweetsPositives = []
@@ -24,10 +39,10 @@ class TwitterClient(object):
         Class constructor or initialization method.
         '''
         # keys and tokens from the Twitter Dev Console
-        consumer_key = 'JkfuUkynd4WfxXLbSukFok7qJ'
-        consumer_secret = 'fauEtTf9t7aLBY2oweFUgCkhOt54lPH51tJXsmCWFSQGSIVM3S'
-        access_token = '2220145722-63yNKOyb0vEd5beJ7LDcutsMpNSiikfvWiAVvV9'
-        access_token_secret = '1ekPldTcxHwdnouSamYtmZczBMxCtOnT94kSTTv9ntcz2'
+        consumer_key = 'put_your_consumer_key'
+        consumer_secret = 'put_your_consumer_secret'
+        access_token = 'put_your_ access_token'
+        access_token_secret = 'put_your_access_token_secret'
  
         # attempt authentication
         try:
@@ -46,16 +61,17 @@ class TwitterClient(object):
             words = tweet.split()
 
             for word in words:
-                existe = False
-                if(word in dictNegatives):
-                    existe = True      
+                if(word not in stop_words):
+                    existe = False
+                    if(word in dictNegatives):
+                        existe = True      
 
-                if(not existe):
-                    dictNegatives[word] = 1
-                if(existe):
-                    count = dictNegatives[word]
-                    count += 1
-                    dictNegatives[word] = count
+                    if(not existe):
+                        dictNegatives[word] = 1
+                    if(existe):
+                        count = dictNegatives[word]
+                        count += 1
+                        dictNegatives[word] = count
 
     def getWordPositives(self):
 
@@ -63,16 +79,18 @@ class TwitterClient(object):
             words = tweet.split()
 
             for word in words:
-                existe = False
-                if(word in dictPositive):
-                    existe = True      
+                word = word.lower()
+                if(word not in stop_words):
+                    existe = False
+                    if(word in dictPositive):
+                        existe = True      
 
-                if(not existe):
-                    dictPositive[word] = 1
-                if(existe):
-                    count = dictPositive[word]
-                    count += 1
-                    dictPositive[word] = count
+                    if(not existe):
+                        dictPositive[word] = 1
+                    if(existe):
+                        count = dictPositive[word]
+                        count += 1
+                        dictPositive[word] = count
 
     def give_emoji_free_text(self, text):
         allchars = [str for str in text]
@@ -205,8 +223,11 @@ def main():
     # creating object of TwitterClient Class
     api = TwitterClient()
     # calling function to get tweets
-    tweets = api.get_tweets(query = 'Bolsonaro', count = 100, tweet_mode='extended', include_entities=True, truncated=False)
- 
+    tweets = []
+    for i in range(50):
+        tweets_i = (api.get_tweets(query = 'amoedo', count = 200, tweet_mode='extended', include_entities=True, truncated=False))
+        tweets = tweets + tweets_i
+
     # picking positive tweets from tweets
     ptweets = [tweet for tweet in tweets if tweet['sentiment'] == 'positive']
     # percentage of positive tweets
@@ -223,12 +244,12 @@ def main():
 
     print(dictPositive)
 
-    with open('positive_words_bolsonaro.csv', 'w') as f:  # Just use 'w' mode in 3.x
+    with open('positive_words_amoedo.csv', 'w') as f:  # Just use 'w' mode in 3.x
         for key in dictPositive.keys():
             f.write("%s,%s\n"%(key,dictPositive[key]))
 
 
-    with open('negative_words_bolsonaro.csv', 'w') as f:  # Just use 'w' mode in 3.x
+    with open('negative_words_amoedo.csv', 'w') as f:  # Just use 'w' mode in 3.x
         for key in dictNegatives.keys():
             f.write("%s,%s\n"%(key,dictNegatives[key]))
 
@@ -246,7 +267,7 @@ def main():
  
 if __name__ == "__main__":
 
-    #sys.stdout=open("out_candidate.txt","w")
+    sys.stdout=open("out_candidate.txt","w")
 
     # calling main function
     main()
